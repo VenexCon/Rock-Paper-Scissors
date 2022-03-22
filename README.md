@@ -32,4 +32,22 @@ This caused some issues when I did not format the operator correctly, and the co
 
 One thing that stuck out in my mind, was that when using if & else if statements, using the equality operator "==", this would convert the string to a number value and therefore, it would choose the value with the highest "value", not what i wnated to happen. 
 
-To combat this, I decided to use the strict equlity "===" operator to remove the conversion (I forgot the proper term). I ended up with this. 
+To combat this, I decided to use the strict equlity "===" operator to remove the conversion (I forgot the proper term). I ended up with this.
+
+        function gameFunction(playerSelection, computerSelection) {
+                if (playerSelection.toUpperCase() === computerSelection.toUpperCase()){
+                        return "DRAW!, Please try again"
+                } else if (playerSelection.toUpperCase()=== "ROCK" && computerSelection.toUpperCase()=== "SCISSORS"){
+                        return "Nice! You have won this round!"
+                } else if (playerSelection.toUpperCase() === "SCISSORS" && computerSelection.toUpperCase() === "PAPER") {
+                        return "Excellent, good job, you have won!"
+                } else if (playerSelection.toUpperCase() === "PAPER" && computerSelection.toUpperCase() === "ROCK") {
+                        return "Great job! you rock!"
+                }  else if (playerSelection.toUpperCase()=== "ROCK" && computerSelection.toUpperCase()=== "PAPER"){
+                        return "Unlucky you lost!"
+                } else if (playerSelection.toUpperCase() === "SCISSORS" && computerSelection.toUpperCase() === "ROCK") {
+                        return "Too bad, better luck next time"
+                } else if (playerSelection.toUpperCase() === "PAPER" && computerSelection.toUpperCase() === "SCISSORS") 
+                        return "Better luck next time buddy!" 
+
+        }
