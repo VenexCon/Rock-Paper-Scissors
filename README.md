@@ -30,3 +30,6 @@ To assign a value to each number the ternary operator was used;
 
 This caused some issues when I did not format the operator correctly, and the compChoice kept going out of scope. In the end i managed to figure out the problem was wrapping the return in parenthesis.
 
+One thing that stuck out in my mind, was that when using if & else if statements, using the equality operator "==", this would convert the string to a number value and therefore, it would choose the value with the highest "value", not what i wnated to happen. 
+
+To combat this, I decided to use the strict equlity "===" operator to remove the conversion (I forgot the proper term). I ended up with this. 
