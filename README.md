@@ -51,3 +51,5 @@ To combat this, I decided to use the strict equlity "===" operator to remove the
                         return "Better luck next time buddy!" 
 
         }
+
+I have since realised that there was no way to keep count of the score using the above method, to change this the returns were changed to true and false, and used these to increment a score of each player. I am then planning to use these to keep track of the results of the game. 
