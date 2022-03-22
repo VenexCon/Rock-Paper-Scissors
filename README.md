@@ -15,16 +15,18 @@ To begin, I have declared the computerPlay function, this will select a random n
 
 To assign a value to each number the ternary operator was used; 
 
-(function computerPlay() {
+
+        function computerPlay() {
         let rPS = ["rock", "paper", "scissors"];
         let compChoice = Math.floor(Math.random() * rPS.length);
         
         return compChoice == 0 ? "rock" :
                 compChoice == 1 ? "Scissors" :
                 "Paper";   
-})
+}
  
-console.log (computerPlay())
+        console.log (computerPlay())
+ 
 
 This caused some issues when I did not format the operator correctly, and the compChoice kept going out of scope. In the end i managed to figure out the problem was wrapping the return in parenthesis.
 
