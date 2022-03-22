@@ -24,22 +24,22 @@ let computerScore = 0;
                         return "DRAW!, Please try again"; 
                 } else if (playerSelection.toUpperCase()=== "ROCK" && computerSelection.toUpperCase()=== "SCISSORS"){
                         console.log("Nice! You have won this round!")
-                         return ++playerScore;
+                          ++playerScore;
                 } else if (playerSelection.toUpperCase() === "SCISSORS" && computerSelection.toUpperCase() === "PAPER") {
                         console.log("Excellent, good job, you have won!")
-                         return ++playerScore;
+                          ++playerScore;
                 } else if (playerSelection.toUpperCase() === "PAPER" && computerSelection.toUpperCase() === "ROCK") {
                         console.log("Great job! you rock!")
-                         return ++playerScore;
+                          ++playerScore;
                 }  else if (playerSelection.toUpperCase()=== "ROCK" && computerSelection.toUpperCase()=== "PAPER"){
                         console.log("Unlucky you lost!")
-                         return ++computerScore;
+                          ++computerScore;
                 } else if (playerSelection.toUpperCase() === "SCISSORS" && computerSelection.toUpperCase() === "ROCK") {
                         console.log("Too bad, better luck next time")
-                         return ++computerScore;
+                         ++computerScore;
                 } else if (playerSelection.toUpperCase() === "PAPER" && computerSelection.toUpperCase() === "SCISSORS") 
                         console.log("Better luck next time buddy!")
-                         return ++computerScore;
+                          ++computerScore;
 
         }
 
@@ -48,7 +48,6 @@ let computerScore = 0;
 // results logged in console
         console.log(playerSelection);
         console.log(computerSelection)
-    
         console.log(playerScore)
         console.log(computerScore)
          
