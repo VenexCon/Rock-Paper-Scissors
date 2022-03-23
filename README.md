@@ -78,4 +78,4 @@ the final function is below:
         }
 
 
-
+note: the xxxxxScore was declared in the global scope. 
