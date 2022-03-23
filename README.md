@@ -55,6 +55,27 @@ To combat this, I decided to use the strict equlity "===" operator to remove the
 I have since realised that there was no way to keep count of the score using the above method, to change this the returns were changed to true and false, and used these to increment a score of each player. I am then planning to use these to keep track of the results of the game. 
 
 
+I struggled alot to get the loop working, once the loop was working I struggled with some unreachable code. After trying many different things! It became obvious that i was console.log()'ing the result of the round, but was not assigning this to a variable. Once i assigned the playRound() to a result (let result = " ") it all clicked into place and worked as it should! 
+
+the final function is below: 
+
+       function gameRound() {
+                for (let i = 0; i<5; i++){
+                        
+                      let result = playRound(playerSelection, computerPlayer()); //playround
+                      if (result === true) {
+                              playerScore++
+                      } else if (result === false){
+                              computerScore++
+                      } else drawCounter++
+               
+                }
+                if (playerScore>computerScore){
+                        return "well done! You have won the game!"
+                } else if (playerScore<computerScore){
+                        return "Unlucky!, you lost good looking!"
+                } else return "No one won, you are both equally awful!"
+        }
 
 
 
