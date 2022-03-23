@@ -3,7 +3,7 @@
 
 This is to log my soloution to the RPS challenge for The Odin Project. 
 
-Firstly, i used git-bash to create and upload the repo to GitHub, along with using it for all VC. 
+Firstly, I used git-bash to create and upload the repo to GitHub, along with using it for all VC. 
 
 To begin, I have declared the computerPlay function, this will select a random number from a created array, using the math.floor & math.random function. 
 
