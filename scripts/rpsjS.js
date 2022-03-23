@@ -54,6 +54,8 @@ let computerScore = 0;
 
 // gameRound() Function Dec 
 
-        function gameRound(playerChoice) {
+        function gameRound() {
+                for (let i - 0; i > 5; i++)
+                     console.log(i)
 
         }
