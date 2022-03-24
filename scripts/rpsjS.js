@@ -19,25 +19,24 @@
 
     // playRound decides the winner
         function playRound(playerSelection, computerSelection) {
-                if (playerSelection.toUpperCase() === computerSelection.toUpperCase()) {
-                        console.log("DRAW");
-                        return null; 
-                } else if (playerSelection.toUpperCase()=== "ROCK" && computerSelection.toUpperCase()=== "SCISSORS"){
+                if (playerSelection.toUpperCase() === computerSelection) {
+                        return console.log("DRAW");
+                } else if (playerSelection.toUpperCase()=== "ROCK" && computerSelection === "SCISSORS"){
                         console.log("Won")
                         return true;
-                } else if (playerSelection.toUpperCase() === "SCISSORS" && computerSelection.toUpperCase() === "PAPER") {
+                } else if (playerSelection.toUpperCase() === "SCISSORS" && computerSelection === "PAPER") {
                         console.log("Won")
                         return true;
-                } else if (playerSelection.toUpperCase() === "PAPER" && computerSelection.toUpperCase() === "ROCK") {
+                } else if (playerSelection.toUpperCase() === "PAPER" && computerSelection === "ROCK") {
                         console.log("Won")
                         return true;
-                }  else if (playerSelection.toUpperCase()=== "ROCK" && computerSelection.toUpperCase()=== "PAPER"){
+                }  else if (playerSelection.toUpperCase()=== "ROCK" && computerSelection === "PAPER"){
                         console.log("Loss")
                         return false;
-                } else if (playerSelection.toUpperCase() === "SCISSORS" && computerSelection.toUpperCase() === "ROCK") {
+                } else if (playerSelection.toUpperCase() === "SCISSORS" && computerSelection === "ROCK") {
                         console.log("Loss")
                         return false;;
-                } else if (playerSelection.toUpperCase() === "PAPER" && computerSelection.toUpperCase() === "SCISSORS") 
+                } else if (playerSelection.toUpperCase() === "PAPER" && computerSelection === "SCISSORS") 
                         console.log("loss")
                         return false;
 
@@ -54,20 +53,20 @@
          
 
     // gameRound() Function Dec 
-    let playerScore = 0;
-    let computerScore = 0; 
-    let drawCounter = 0; 
+  
 
 
         function gameRound() {
+                let playerScore = 0;
+                let computerScore = 0; 
                 for (let i = 0; i<5; i++){
                         
-                      let result = playRound(playerSelection, computerPlayer()); //playround
+                      let result = playRound(playerSelection, computerPlayer()); //playRound
                       if (result === true) {
                               playerScore++
                       } else if (result === false){
                               computerScore++
-                      } else drawCounter++
+                      } 
                
                 }
                 if (playerScore>computerScore){
@@ -79,6 +78,3 @@
          
                           
         console.log(gameRound())
-        console.log(playerScore)
-        console.log(computerScore)
-        console.log(drawCounter)
