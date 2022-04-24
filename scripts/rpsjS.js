@@ -3,8 +3,20 @@
 // computerPlayer should be first function 
 
 
+const rockBtn = document.getElementById(`rockBtn`); 
+const scissorBtn = document.getElementById(`scissorBtn`); 
+const paperBtn = document.getElementById(`paperBtn`);
+const playerResult = document.getElementById(`playerTally`); 
+const computerResult = document.getElementById(`computerTally`); 
 
-        function computerPlayer() {
+
+let playerSelection= " ";  
+let computerSelection = computerPlayer(); 
+let playerScore = 0;
+let computerScore = 0; 
+
+
+function computerPlayer() {
         let rPS = ["ROCK", "PAPER", "SCISSORS"];
         let compChoice = Math.floor(Math.random() * rPS.length);
         
@@ -14,8 +26,8 @@
         }
         
     // computerSelection = computerPlay(); 
-        computerSelection = computerPlayer(); 
-        playerSelection = prompt(); 
+
+       // playerSelection = prompt(); 
 
     // playRound decides the winner
         function playRound(playerSelection, computerSelection) {
@@ -41,24 +53,30 @@
                         return false;
 
         }
-               
 
 
+rockBtn.addEventListener(`click`, () => {
+        playerSelection = "rock"; 
+        playRound() ;
+});
 
-    // results logged in console
-       // console.log(playerSelection);
-        //console.log(computerSelection)
-        //console.log(playerScore)
-        //console.log(computerScore)
-         
 
-    // gameRound() Function Dec 
+paperBtn.addEventListener(`click`, () => {
+        playerSelection = "paper";
+        playRound(); 
+});
+
+
+scissorBtn.addEventListener(`click`, () => {
+        playerSelection = "scissors"; 
+        playRound()
+});
+
   
 
 
-        function gameRound() {
-                let playerScore = 0;
-                let computerScore = 0; 
+
+function gameRound() { 
                 for (let i = 0; i<5; i++){
                         
                       let result = playRound(playerSelection, computerPlayer()); //playRound
@@ -74,7 +92,7 @@
                 } else if (playerScore<computerScore){
                         return "Unlucky!, you lost good looking!"
                 } else return "No one won, you are both equally awful!"
-        }
+        } 
          
                           
         console.log(gameRound())
