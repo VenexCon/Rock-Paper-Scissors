@@ -31,24 +31,24 @@ function computerPlayer() {
 
     // playRound decides the winner
         function playRound(playerSelection, computerSelection) {
-                if (playerSelection.toUpperCase() === computerSelection) {
+                if (playerSelection === computerSelection) {
                         return console.log("DRAW");
-                } else if (playerSelection.toUpperCase()=== "ROCK" && computerSelection === "SCISSORS"){
+                } else if (playerSelection === "ROCK" && computerSelection === "SCISSORS"){
                         console.log("Won")
                         return true;
-                } else if (playerSelection.toUpperCase() === "SCISSORS" && computerSelection === "PAPER") {
+                } else if (playerSelection === "SCISSORS" && computerSelection === "PAPER") {
                         console.log("Won")
                         return true;
-                } else if (playerSelection.toUpperCase() === "PAPER" && computerSelection === "ROCK") {
+                } else if (playerSelection === "PAPER" && computerSelection === "ROCK") {
                         console.log("Won")
                         return true;
-                }  else if (playerSelection.toUpperCase()=== "ROCK" && computerSelection === "PAPER"){
+                }  else if (playerSelection === "ROCK" && computerSelection === "PAPER"){
                         console.log("Loss")
                         return false;
-                } else if (playerSelection.toUpperCase() === "SCISSORS" && computerSelection === "ROCK") {
+                } else if (playerSelection === "SCISSORS" && computerSelection === "ROCK") {
                         console.log("Loss")
                         return false;;
-                } else if (playerSelection.toUpperCase() === "PAPER" && computerSelection === "SCISSORS") 
+                } else if (playerSelection  === "PAPER" && computerSelection === "SCISSORS") 
                         console.log("loss")
                         return false;
 
@@ -56,20 +56,20 @@ function computerPlayer() {
 
 
 rockBtn.addEventListener(`click`, () => {
-        playerSelection = "rock"; 
-        playRound() ;
+        playerSelection = "ROCK"; 
+        return playRound() ;
 });
 
 
 paperBtn.addEventListener(`click`, () => {
-        playerSelection = "paper";
-        playRound(); 
+        playerSelection = "PAPER";
+        return playRound(); 
 });
 
 
 scissorBtn.addEventListener(`click`, () => {
-        playerSelection = "scissors"; 
-        playRound()
+        playerSelection = "SCISSORS"; 
+        return playRound()
 });
 
   
