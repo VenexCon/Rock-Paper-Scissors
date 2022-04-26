@@ -30,67 +30,72 @@ function computerPlayer() {
     // playRound decides the winner
         function playRound(playerSelection, computerSelection) {
                 if (playerSelection === computerSelection) {
-                        return console.log("DRAW");
+                        return announcement_box.textContent = "You have both drawn! try again! ";
                 } else if (playerSelection === "ROCK" && computerSelection === "SCISSORS"){
-                        console.log("Won");
-                        return true; // replace true with playerTally++ , use event listener to determine if (tally = 5)
+                        announcement_box.textContent = "You have chosen well!, you won this round";
+                        return playerScore++ ;
                 } else if (playerSelection === "SCISSORS" && computerSelection === "PAPER") {
-                        console.log("Won");
-                        return true;
+                        announcement_box.textContent = "You have chosen well!, you won this round";
+                        return playerScore++;
                 } else if (playerSelection === "PAPER" && computerSelection === "ROCK") {
-                        console.log("Won");
-                        return true;
+                        announcement_box.textContent = "You have chosen well!, you won this round";
+                        return playerScore++;
                 }  else if (playerSelection === "ROCK" && computerSelection === "PAPER"){
-                        console.log("Loss");
-                        return false;
+                        announcement_box.textContent = "You have chosen badly!, you lost this round";
+                        return computerScore++;
                 } else if (playerSelection === "SCISSORS" && computerSelection === "ROCK") {
-                        console.log("Loss");
-                        return false;
+                        announcement_box.textContent = "You have badly well!, you lost this round";
+                        return computerScore++;
                 } else if (playerSelection  === "PAPER" && computerSelection === "SCISSORS") 
-                        console.log("loss");
-                        return false;
-
+                        announcement_box.textContent = "You have chosen badly!, you lost this round";
+                        return computerScore++;
         }
+
+
+// gameRound plays the game and updates the DOM with the score. 
+
+function gameRound() {
+        computerSelection = computerPlayer();
+        playRound(playerSelection, computerSelection);
+        playerResult.textContent = playerScore; 
+        computerResult.textContent = computerScore;
+        decision()
+
+};
+
+
+function decision (playerScore, computerSelection) {
+        if (playerScore === 5) {
+                return announcement_box.textContent ="Well done, you have survived this game"; 
+        } else if( computerScore ===5) {
+                return announcement_box.textContent="Unlucky, you have been thrown back into jail."
+        } else return; 
+}
+
+// add in a section to either a, stop the game (test function) or B hide the buttons and display something else. 
+
 
 
 rockBtn.addEventListener(`click`, () => {
         playerSelection = "ROCK"; 
-        return playRound(playerSelection, computerPlayer()) ;
+        gameRound()
 });
-
+ 
 
 paperBtn.addEventListener(`click`, () => {
         playerSelection = "PAPER";
-        return playRound(playerSelection, computerPlayer()); 
+        gameRound() 
 });
 
 
 scissorBtn.addEventListener(`click`, () => {
         playerSelection = "SCISSORS"; 
-        return playRound(playerSelection, computerPlayer())
+        gameRound()
 });
 
   
 
 
 
-function gameRound() { 
-                for (let i = 0; i<5; i++){
-                        
-                      let result = playRound(playerSelection, computerPlayer()); //playRound
-                      if (result === true) {
-                              playerScore++
-                      } else if (result === false){
-                              computerScore++
-                      } 
-               
-                }
-                if (playerScore>computerScore){
-                        return "well done! You have won the game!"
-                } else if (playerScore<computerScore){
-                        return "Unlucky!, you lost good looking!"
-                } else return "No one won, you are both equally awful!"
-        } 
-         
-                          
-        console.log(gameRound())
+
+        
