@@ -15,6 +15,7 @@ let computerSelection = computerPlayer();
 let playerScore = 0;
 let computerScore = 0; 
 
+        // Random computer selection.
 
 function computerPlayer() {
         let rPS = ["ROCK", "PAPER", "SCISSORS"];
@@ -24,32 +25,29 @@ function computerPlayer() {
                 compChoice == 1 ? "SCISSORS" :
                 "PAPER";   
         }
-        
-    // computerSelection = computerPlay(); 
 
-       // playerSelection = prompt(); 
 
     // playRound decides the winner
         function playRound(playerSelection, computerSelection) {
                 if (playerSelection === computerSelection) {
                         return console.log("DRAW");
                 } else if (playerSelection === "ROCK" && computerSelection === "SCISSORS"){
-                        console.log("Won")
-                        return true;
+                        console.log("Won");
+                        return true; // replace true with playerTally++ , use event listener to determine if (tally = 5)
                 } else if (playerSelection === "SCISSORS" && computerSelection === "PAPER") {
-                        console.log("Won")
+                        console.log("Won");
                         return true;
                 } else if (playerSelection === "PAPER" && computerSelection === "ROCK") {
-                        console.log("Won")
+                        console.log("Won");
                         return true;
                 }  else if (playerSelection === "ROCK" && computerSelection === "PAPER"){
-                        console.log("Loss")
+                        console.log("Loss");
                         return false;
                 } else if (playerSelection === "SCISSORS" && computerSelection === "ROCK") {
-                        console.log("Loss")
-                        return false;;
+                        console.log("Loss");
+                        return false;
                 } else if (playerSelection  === "PAPER" && computerSelection === "SCISSORS") 
-                        console.log("loss")
+                        console.log("loss");
                         return false;
 
         }
@@ -57,19 +55,19 @@ function computerPlayer() {
 
 rockBtn.addEventListener(`click`, () => {
         playerSelection = "ROCK"; 
-        return playRound() ;
+        return playRound(playerSelection, computerPlayer()) ;
 });
 
 
 paperBtn.addEventListener(`click`, () => {
         playerSelection = "PAPER";
-        return playRound(); 
+        return playRound(playerSelection, computerPlayer()); 
 });
 
 
 scissorBtn.addEventListener(`click`, () => {
         playerSelection = "SCISSORS"; 
-        return playRound()
+        return playRound(playerSelection, computerPlayer())
 });
 
   
