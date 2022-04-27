@@ -8,6 +8,7 @@ const scissorBtn = document.getElementById(`scissorBtn`);
 const paperBtn = document.getElementById(`paperBtn`);
 const playerResult = document.getElementById(`playerTally`); 
 const computerResult = document.getElementById(`computerTally`); 
+const score = document.getElementById(`score`); 
 
 
 let playerSelection= " ";  
@@ -20,15 +21,14 @@ let computerScore = 0;
 function computerPlayer() {
         let rPS = ["ROCK", "PAPER", "SCISSORS"];
         let compChoice = Math.floor(Math.random() * rPS.length);
-        
         return compChoice == 0 ? "ROCK" :
                 compChoice == 1 ? "SCISSORS" :
                 "PAPER";   
-        }
+        };
 
 
-    // playRound decides the winner
-        function playRound(playerSelection, computerSelection) {
+ // playRound decides the winner
+         function playRound(playerSelection, computerSelection) {
                 if (playerSelection === computerSelection) {
                         return announcement_box.textContent = "You have both drawn! try again! ";
                 } else if (playerSelection === "ROCK" && computerSelection === "SCISSORS"){
@@ -59,15 +59,26 @@ function gameRound() {
         playRound(playerSelection, computerSelection);
         playerResult.textContent = playerScore; 
         computerResult.textContent = computerScore;
-        decision()
+         decision(playerScore, computerScore);
 
 };
 
+function toggleHide () {
+        score.classList.toggle(`hidden`);
+        scissorBtn.classList.toggle(`hidden`);
+        paperBtn.classList.toggle(`hidden`);
+        rockBtn.classList.toggle(`hidden`);
 
-function decision (playerScore, computerSelection) {
+}
+
+
+
+function decision (playerScore, computerScore) {
         if (playerScore === 5) {
+                toggleHide();
                 return announcement_box.textContent ="Well done, you have survived this game"; 
         } else if( computerScore ===5) {
+                toggleHide();
                 return announcement_box.textContent="Unlucky, you have been thrown back into jail."
         } else return; 
 }
