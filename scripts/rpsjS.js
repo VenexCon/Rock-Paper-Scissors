@@ -94,6 +94,7 @@ function reset () {
         computerScore= 0; 
         playerResult.textContent = playerScore; 
         computerResult.textContent = computerScore;
+        announcement_box.textContent = ""; 
 }
 
 
