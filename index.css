@@ -5,37 +5,31 @@ body{
     color: black;
     padding: 1em;
     text-align: center;
+    background-color: crimson;
    }
+
 
 h1 {
     font-weight: 2em;
 }
-
-
 
 /* hidden hides the buttons once 5 is reached */ 
 .hidden {
     display: none
 }; 
 
-
-
+/* Options stylised selector */
 #buttonImg { 
     height: 0.5em;
     width: 0.5em
-
 }
 
-.options {
-    display: flex;
-    background-color: aqua;
+.optionsContainer {
     width: 75%;
     height: auto;
     margin: 0 auto;
-    border-style: solid;
-    border-color: brown;
 
-
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -46,10 +40,9 @@ h1 {
     width: 2em;
     height: auto;
     background-color: crimson;
-    border-style: solid;
 }
 
-img {
-    height: 2em;
-    width: 2em;
+#optionsImg {
+    height: 3em;
+    width: 3em;
 }

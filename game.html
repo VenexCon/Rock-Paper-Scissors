@@ -4,10 +4,10 @@
 <title>Page Title</title>
 <head>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="./index.css">
+<link rel="stylesheet" href="index.css">
 <style>
 </style>
-<script src="./scripts/rpsjS.js" defer> 
+<script src="scripts/rpsjS.js" defer> 
 </script>
 </head>
 <body>
@@ -17,17 +17,23 @@
 <h4>Select one of the options below to begin the game....... </h4>
 
 
-<div class="container">
 
-        <button class="cssBtn" id="rockBtn"> Rock</button>
+<div class="optionsContainer">
 
-
+        <div class="box" id="rockOption">
+                <img src="images/landslide.png" alt="Rock image selector"  id="optionsImg">
+        </div>
         
-        <button class="cssBtn"  id="paperBtn">Paper</button>
-    
- 
-        <button class="cssBtn" id="scissorBtn">Scissors</button>
+        <div class="box" id="paperOption">
+                <img src="images/toilet-paper.png" alt="paper image selector" id="optionsImg">
+        </div>
+
+        <div class="box" id="scissorOption">
+                <img src="images/scissors.png" alt="Scissors image selector"  id="optionsImg">
+        </div>
+
 </div>
+
 
 <div class = "Announcement">
         <p id = "announcement_box"></p>
@@ -45,18 +51,13 @@
 </div>
 
 
-<div class="options">
-        <div class="box" id="rockOption">
-                <img src="images/landslide.png" alt="Rock image selector">
-        </div>
-
-        <div class="box" id="paperOption">
-                <img src="/images/toilet-paper.png" alt="paper image selector">
-        </div>
-        <div class="box" id="scissorOption">
-                <img src="/images/scissors.png" alt="Scissors image selector">
-        </div>
+<div class="resetbox" id="resetGame">
+        <img src="images/reset.png" alt="reset image selector"  id="optionsImg">
 </div>
+
+
+
+
 
 
 

@@ -9,6 +9,8 @@ const paperOption = document.getElementById(`paperOption`);
 const playerResult = document.getElementById(`playerTally`); 
 const computerResult = document.getElementById(`computerTally`); 
 const score = document.getElementById(`score`); 
+const resetGame = document.getElementById(`resetGame`); 
+
 
 
 let playerSelection= " ";  
@@ -82,7 +84,18 @@ function decision (playerScore, computerScore) {
         } else return; 
 }
 
-// add in a section to either a, stop the game (test function) or B hide the buttons and display something else. 
+
+function reset () {
+        score.classList.remove(`hidden`); 
+        scissorOption.classList.remove(`hidden`);
+        paperOption.classList.remove(`hidden`);
+        rockOption.classList.remove(`hidden`);
+        playerScore = 0; 
+        computerScore= 0; 
+        playerResult.textContent = playerScore; 
+        computerResult.textContent = computerScore;
+}
+
 
 
 
@@ -103,7 +116,9 @@ scissorOption.addEventListener(`click`, () => {
         gameRound()
 });
 
-  
+resetGame.addEventListener(`click`, () => {
+        reset();
+});
 
 
 
