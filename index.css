@@ -1,16 +1,55 @@
 
+body{
+    margin: 0 auto;
+    font-family: 'Red Hat Display', sans-serif;
+    color: black;
+    padding: 1em;
+    text-align: center;
+   }
+
+h1 {
+    font-weight: 2em;
+}
 
 
 
-
-
-
-
-
+/* hidden hides the buttons once 5 is reached */ 
 .hidden {
     display: none
-};
+}; 
 
-.score {
-    display: block;
-};
+
+
+#buttonImg { 
+    height: 0.5em;
+    width: 0.5em
+
+}
+
+.options {
+    display: flex;
+    background-color: aqua;
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+    border-style: solid;
+    border-color: brown;
+
+
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.box {
+    width: 2em;
+    height: auto;
+    background-color: crimson;
+    border-style: solid;
+}
+
+img {
+    height: 2em;
+    width: 2em;
+}

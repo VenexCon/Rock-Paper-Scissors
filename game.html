@@ -13,19 +13,20 @@
 <body>
 
 <h1>Rock, Paper, Scissors?</h1>
+<h2>Win your freedom, lose?  you're going straight back to jail</h2> 
+<h4>Select one of the options below to begin the game....... </h4>
 
 
 <div class="container">
 
-        <button id="rockBtn"> Rock</button>
+        <button class="cssBtn" id="rockBtn"> Rock</button>
 
-    
-        <button id="paperBtn">Paper</button>
-    
 
+        
+        <button class="cssBtn"  id="paperBtn">Paper</button>
+    
  
-        <button id="scissorBtn">Scissors</button>
-
+        <button class="cssBtn" id="scissorBtn">Scissors</button>
 </div>
 
 <div class = "Announcement">
@@ -33,16 +34,27 @@
 </div>
 
 <div id="score">
-
         <div>
            <h2> Players Score</h2>     
                 <h2 id="playerTally">0</h2>
         </div>
-
-
         <div>
               <h2> Computers Score</h2>  
                 <h2 id="computerTally">0</h2>
+        </div>
+</div>
+
+
+<div class="options">
+        <div class="box" id="rockOption">
+                <img src="images/landslide.png" alt="Rock image selector">
+        </div>
+
+        <div class="box" id="paperOption">
+                <img src="/images/toilet-paper.png" alt="paper image selector">
+        </div>
+        <div class="box" id="scissorOption">
+                <img src="/images/scissors.png" alt="Scissors image selector">
         </div>
 </div>
 

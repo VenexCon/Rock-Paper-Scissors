@@ -3,9 +3,9 @@
 // computerPlayer should be first function 
 
 
-const rockBtn = document.getElementById(`rockBtn`); 
-const scissorBtn = document.getElementById(`scissorBtn`); 
-const paperBtn = document.getElementById(`paperBtn`);
+const rockOption = document.getElementById(`rockOption`); 
+const scissorOption = document.getElementById(`scissorOption`); 
+const paperOption = document.getElementById(`paperOption`);
 const playerResult = document.getElementById(`playerTally`); 
 const computerResult = document.getElementById(`computerTally`); 
 const score = document.getElementById(`score`); 
@@ -65,11 +65,10 @@ function gameRound() {
 
 function toggleHide () {
         score.classList.toggle(`hidden`);
-        scissorBtn.classList.toggle(`hidden`);
-        paperBtn.classList.toggle(`hidden`);
-        rockBtn.classList.toggle(`hidden`);
-
-}
+        scissorOption.classList.toggle(`hidden`);
+        paperOption.classList.toggle(`hidden`);
+        rockOption.classList.toggle(`hidden`);
+};
 
 
 
@@ -87,19 +86,19 @@ function decision (playerScore, computerScore) {
 
 
 
-rockBtn.addEventListener(`click`, () => {
+rockOption.addEventListener(`click`, () => {
         playerSelection = "ROCK"; 
         gameRound()
 });
  
 
-paperBtn.addEventListener(`click`, () => {
+paperOption.addEventListener(`click`, () => {
         playerSelection = "PAPER";
         gameRound() 
 });
 
 
-scissorBtn.addEventListener(`click`, () => {
+scissorOption.addEventListener(`click`, () => {
         playerSelection = "SCISSORS"; 
         gameRound()
 });
