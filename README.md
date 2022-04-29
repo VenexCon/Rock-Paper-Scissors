@@ -79,3 +79,14 @@ the final function is below:
 
 
 note: the xxxxxScore was declared in the global scope. 
+
+
+Update 
+
+<hr> 
+
+This re-work involved adding an interactive UI to the rock, paper, scissor game and therefore involved re-working the existing javascript and user interface. 
+
+Ths involved getting familiar with ES6 functions and using a combination of skills learnt on FCC, TOP and CSS Tricks along with referencing MDN docs. To make it more interesting I went with using icons instead of simple buttons and used basic CSS to style the page. 
+
+Through doing this i became far more confidenti n functions, DOM manipulation and callback functions. 
