@@ -90,3 +90,11 @@ This re-work involved adding an interactive UI to the rock, paper, scissor game 
 Ths involved getting familiar with ES6 functions and using a combination of skills learnt on FCC, TOP and CSS Tricks along with referencing MDN docs. To make it more interesting I went with using icons instead of simple buttons and used basic CSS to style the page. 
 
 Through doing this i became far more confidenti n functions, DOM manipulation and callback functions. 
+
+<hr> 
+
+The RPS game functionality is finished, but it does require further CSS updates. I like the red background, but not entirely happy with the initial presentation, perhaps yellow would be better and slightly more cartoony. However, CSS takes time, and I would rather become more focucsed on lopps and recursion, although recursion seems very rare. 
+
+I am still getting used to array methods, but after completing FCC's basic javascript and with the etch-a-sketch project left with TOP, i am looking foward to the frontend Dev course even more so. 
+
+
