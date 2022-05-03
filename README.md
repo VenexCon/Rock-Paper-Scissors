@@ -95,6 +95,15 @@ Through doing this i became far more confidenti n functions, DOM manipulation an
 
 The RPS game functionality is finished, but it does require further CSS updates. I like the red background, but not entirely happy with the initial presentation, perhaps yellow would be better and slightly more cartoony. However, CSS takes time, and I would rather become more focucsed on lopps and recursion, although recursion seems very rare. 
 
-I am still getting used to array methods, but after completing FCC's basic javascript and with the etch-a-sketch project left with TOP, i am looking foward to the frontend Dev course even more so. 
+I am still getting used to array methods, but after completing FCC's basic javascript and with the etch-a-sketch project left with TOP, i am looking foward to the frontend Dev course even more so.
 
+I will come back to this and add the following features, due to being away i do not have acces to my orignal computer and as such cannot work on my projects! 
 
+Items to be added 
+
+<ol>
+         <li> Cartoony text and styling </li>
+         <li> Transition effects when won </li> 
+</ol> 
+
+This is to practice durther CSS Styling and javaScript animation. 
